@@ -62,7 +62,7 @@ const FormProduct = () => {
   return (
     <div>
       <h2>FormProduct</h2>
-      <form onSubmit={handleSubmit} enctype="multipart/form-data">
+      <form onSubmit={handleSubmit} encType="multipart/form-data">
         <input
           type="text"
           name="name"

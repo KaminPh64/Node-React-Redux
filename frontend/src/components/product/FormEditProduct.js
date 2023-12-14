@@ -17,7 +17,7 @@ const FormEditProduct = () => {
 
   useEffect(() => {
     loadData(paramsId);
-  }, []);
+  }, [paramsId]);
 
   const loadData = async (id) => {
     read(id)
@@ -64,7 +64,7 @@ const FormEditProduct = () => {
   return (
     <div>
       <h2>Form Edit Product</h2>
-      <form onSubmit={handleSubmit} enctype="multipart/form-data">
+      <form onSubmit={handleSubmit} encType="multipart/form-data">
         <input
           type="text"
           name="name"

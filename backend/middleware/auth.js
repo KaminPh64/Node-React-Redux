@@ -5,10 +5,9 @@ exports.auth = async (req, res, next) => {
     const token = req.headers["authtoken"];
     console.log(token);
     if (!token) {
-      return res.status(401).send("No token");
+      return res.send("No token").status(401);
     }
     const decoded = jwt.verify(token, "jwtsecret");
-    // res.send(decoded)
     req.user = decoded.user;
 
     next();
